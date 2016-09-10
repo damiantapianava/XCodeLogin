@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Jp-o4-HoH">
+                                <rect key="frame" x="0.0" y="8" width="600" height="237"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jon-EK-Qlq">
+                                        <rect key="frame" x="70" y="160" width="480" height="30"/>
+                                        <color key="backgroundColor" red="0.12889108829153209" green="0.69404450261780104" blue="0.15632908604195672" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <state key="normal" title="Entrar">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="botonTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q7Q-jY-Cqy"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SDp-ix-NIX">
+                                        <rect key="frame" x="70" y="90" width="480" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJT-Wx-N0G">
+                                        <rect key="frame" x="280" y="40" width="58" height="21"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="mJT-Wx-N0G" firstAttribute="centerX" secondItem="6Jp-o4-HoH" secondAttribute="centerX" id="JQq-8x-NXA"/>
+                                    <constraint firstItem="jon-EK-Qlq" firstAttribute="centerX" secondItem="6Jp-o4-HoH" secondAttribute="centerX" id="K0I-bv-KKj"/>
+                                    <constraint firstItem="SDp-ix-NIX" firstAttribute="centerX" secondItem="6Jp-o4-HoH" secondAttribute="centerX" id="fGk-5J-dPd"/>
+                                    <constraint firstItem="SDp-ix-NIX" firstAttribute="top" secondItem="mJT-Wx-N0G" secondAttribute="bottom" constant="30" id="oCe-fQ-GGJ"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12190330344916314" green="0.66666666666666663" blue="0.33934975900233422" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="6Jp-o4-HoH" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="1Db-YF-CI1"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="4i2-HJ-cdd" appends="YES" id="qMu-ia-40a"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="btn_signin" destination="jon-EK-Qlq" id="CPC-zJ-VH8"/>
+                        <outlet property="scroll_view" destination="6Jp-o4-HoH" id="Q9g-Wl-aWX"/>
+                        <outlet property="txt_username" destination="SDp-ix-NIX" id="lf2-rV-mmI"/>
+                        <segue destination="XT5-tO-kwn" kind="presentation" identifier="loginOK" id="mMK-F3-oam"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="4i2-HJ-cdd">
+                    <connections>
+                        <action selector="hideScrollTap:" destination="BYZ-38-t0r" id="F8V-zG-JTc"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="395" y="379"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BTo-Ko-HMq">
+            <objects>
+                <viewController id="XT5-tO-kwn" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UBL-JS-ki4"/>
+                        <viewControllerLayoutGuide type="bottom" id="QmR-KE-TVT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ajk-OV-VPG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Login Succes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XsV-Lo-zb2">
+                                <rect key="frame" x="247" y="184" width="106" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16400124221138504" green="0.72913939790575921" blue="0.28497352944965798" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="XsV-Lo-zb2" firstAttribute="centerX" secondItem="Ajk-OV-VPG" secondAttribute="centerX" id="cTF-Fb-J4v"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wrm-ed-wIC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1152" y="379"/>
+        </scene>
+    </scenes>
+</document>
